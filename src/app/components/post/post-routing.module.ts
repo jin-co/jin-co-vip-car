@@ -6,6 +6,7 @@ import {
   AngularFireAuthGuard,
   redirectUnauthorizedTo,
 } from '@angular/fire/compat/auth-guard';
+import { PriceComponent } from '../price/price.component';
 
 const redirectUnauthorizedToHome = () => redirectUnauthorizedTo('/');
 
@@ -29,9 +30,13 @@ const routes: Routes = [
     canActivate: [AngularFireAuthGuard],
   },
   {
+    path: 'price',
+    component: PriceComponent,        
+  },
+  {
     path: 'manage-clip',
     redirectTo: 'manage',
-  },
+  },  
 ];
 
 @NgModule({
