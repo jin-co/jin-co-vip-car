@@ -122,6 +122,10 @@ body {
           animation: shadow 1.5s ease-in-out alternate infinite;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @-webkit-keyframes shadow {
   0% {
     -webkit-transform: scale(1) translateY(0px);
