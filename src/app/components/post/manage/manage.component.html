@@ -1,12 +1,12 @@
 <!-- Top Bar -->
-<section class="container mx-auto my-8 bg-secondary p-6">
+<section class="container mt-36 mx-auto my-8 bg-secondary p-6">
   <div class="rounded relative flex justify-between">
-    <a routerLink="/upload" class="bg-indigo-400 text-white py-4 px-10 text-xl">Upload Videos</a>
+    <a routerLink="/upload" class="bg-indigo-400 text-white py-4 px-10 text-xl">사진등록</a>
 
     <!-- Sort Videos -->
     <select (change)="sort($event)" class="text-black px-8 text-xl outline-none appearance-none">
-      <option value="1">Recent Uploads</option>
-      <option value="2">Oldest Uploads</option>
+      <option value="1">최신글 위로</option>
+      <option value="2">오래된 글 위로</option>
     </select>
   </div>
 </section>
