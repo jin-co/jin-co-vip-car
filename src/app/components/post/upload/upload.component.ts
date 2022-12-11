@@ -70,7 +70,7 @@ export class UploadComponent implements OnInit, OnDestroy {
       ? (e as DragEvent).dataTransfer?.files.item(0) ?? null
       : (e.target as HTMLInputElement).files?.item(0) ?? null;
 
-    if (!this.file || this.file.type !== 'video/mp4') {
+    if (!this.file || !this.file.type.includes('image/')) {
       return;
     }
 
