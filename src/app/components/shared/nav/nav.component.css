@@ -1,0 +1,22 @@
+nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+h1 {
+  width: 220px;
+  word-wrap: break-word;
+}
+
+ul {
+  width: 100%;
+  display: flex;  
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+

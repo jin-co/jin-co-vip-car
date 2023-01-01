@@ -1,40 +1,39 @@
 <header id="header" class="">
   <nav class="">
     <!-- App Name -->
-    <a class="" routerLink="/" routerLinkActive="text-indigo-400"
-      [routerLinkActiveOptions]="{exact: true}">디테일 마스터</a>
+    <h1>
+      <a class="" routerLink="/" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact: true}">디테일 마스터</a>
+    </h1>
 
-    <div class="">
-      <!-- Primary Navigation -->
-      <ul class="">
-        <!-- Navigation Links -->
+    <!-- Primary Navigation -->
+    <ul class="">
+      <!-- Navigation Links -->
+      <li>
+        <a class="" routerLink="/price" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact: true}">가격
+          알아보기</a>
+      </li>
+
+      <li>
+        <a class="" routerLink="/about" routerLinkActive="text-indigo-400"
+          [routerLinkActiveOptions]="{exact: true}">매장정보</a>
+      </li>
+
+      <li *ngIf="!(authService.isAuthenticated$ | async) ; else loggedInMenu">
+        <a class=" cursor-pointer" (click)="openModal($event)">관리자</a>
+      </li>
+
+      <ng-template #loggedInMenu>
         <li>
-          <a class="" routerLink="/price" routerLinkActive="text-indigo-400"
-            [routerLinkActiveOptions]="{exact: true}">가격 알아보기</a>
+          <a class="" routerLink="/manage" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact: true}"
+            [queryParams]="{sort:'1'}">작업사진관리</a>
         </li>
-        
         <li>
-          <a class="" routerLink="/about" routerLinkActive="text-indigo-400"
-            [routerLinkActiveOptions]="{exact: true}">매장정보</a>
+          <a class="" routerLink="/upload" routerLinkActive="text-indigo-400">작업사진 올리기</a>
         </li>
-
-        <li *ngIf="!(authService.isAuthenticated$ | async) ; else loggedInMenu">
-          <a class=" cursor-pointer" (click)="openModal($event)">관리자</a>
+        <li>
+          <a class="" (click)="onLogout()">로그아웃</a>
         </li>
-
-        <ng-template #loggedInMenu>
-          <li>
-            <a class="" routerLink="/manage" routerLinkActive="text-indigo-400"
-              [routerLinkActiveOptions]="{exact: true}" [queryParams]="{sort:'1'}">작업사진관리</a>
-          </li>
-          <li>
-            <a class="" routerLink="/upload" routerLinkActive="text-indigo-400">작업사진 올리기</a>
-          </li>
-          <li>
-            <a class="" (click)="onLogout()">로그아웃</a>
-          </li>          
-        </ng-template>
-      </ul>
-    </div>
+      </ng-template>
+    </ul>
   </nav>
 </header>
