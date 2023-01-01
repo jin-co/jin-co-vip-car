@@ -1,37 +1,37 @@
-<header id="header" class="w-full fixed top-0 left-0 z-10">
-  <nav class="container mx-auto flex items-center py-8 px-4">
+<header id="header" class="">
+  <nav class="">
     <!-- App Name -->
-    <a class="text-3xl text-indigo-400 font-bold uppercase mr-4" routerLink="/" routerLinkActive="text-indigo-400"
-      [routerLinkActiveOptions]="{exact: true}">VIP CAR</a>
+    <a class="" routerLink="/" routerLinkActive="text-indigo-400"
+      [routerLinkActiveOptions]="{exact: true}">디테일 마스터</a>
 
-    <div class="flex flex-grow items-center justify-end">
+    <div class="">
       <!-- Primary Navigation -->
-      <ul class="flex flex-row mt-1">
+      <ul class="">
         <!-- Navigation Links -->
         <li>
-          <a class="px-2" routerLink="/price" routerLinkActive="text-indigo-400"
+          <a class="" routerLink="/price" routerLinkActive="text-indigo-400"
             [routerLinkActiveOptions]="{exact: true}">가격 알아보기</a>
         </li>
         
         <li>
-          <a class="px-2" routerLink="/about" routerLinkActive="text-indigo-400"
+          <a class="" routerLink="/about" routerLinkActive="text-indigo-400"
             [routerLinkActiveOptions]="{exact: true}">매장정보</a>
         </li>
 
         <li *ngIf="!(authService.isAuthenticated$ | async) ; else loggedInMenu">
-          <a class="px-2 cursor-pointer" (click)="openModal($event)">관리자</a>
+          <a class=" cursor-pointer" (click)="openModal($event)">관리자</a>
         </li>
 
         <ng-template #loggedInMenu>
           <li>
-            <a class="px-2" routerLink="/manage" routerLinkActive="text-indigo-400"
+            <a class="" routerLink="/manage" routerLinkActive="text-indigo-400"
               [routerLinkActiveOptions]="{exact: true}" [queryParams]="{sort:'1'}">작업사진관리</a>
           </li>
           <li>
-            <a class="px-2" routerLink="/upload" routerLinkActive="text-indigo-400">작업사진 올리기</a>
+            <a class="" routerLink="/upload" routerLinkActive="text-indigo-400">작업사진 올리기</a>
           </li>
           <li>
-            <a class="px-2" (click)="onLogout()">로그아웃</a>
+            <a class="" (click)="onLogout()">로그아웃</a>
           </li>          
         </ng-template>
       </ul>
