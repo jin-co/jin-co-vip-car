@@ -8,12 +8,7 @@ import { ClipService } from './services/clip.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  {
-    path: '',
-    loadChildren: async () =>
-      (await import('./components/post/post.module')).PostModule,
-  },
+  { path: 'about', component: AboutComponent },  
   { path: '**', component: NotfoundComponent },
 ];
 
