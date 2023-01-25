@@ -19,7 +19,7 @@
       </li>
 
       <li *ngIf="!(authService.isAuthenticated$ | async) ; else loggedInMenu">
-        <a class=" cursor-pointer" (click)="openModal($event)">관리자</a>
+        <a class="" (click)="openModal()">관리자</a>
       </li>
 
       <ng-template #loggedInMenu>

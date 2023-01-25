@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { Modal } from '../models/modal';
 
 @Injectable({ providedIn: 'root' })
-export class ModalService {
-  // private visible: boolean = false;
+export class ModalService {  
   private modals: Modal[] = [];
 
   constructor() {}

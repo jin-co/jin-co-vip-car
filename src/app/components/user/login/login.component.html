@@ -4,22 +4,16 @@
 
 <form (submit)="onSubmit(form)" #form="ngForm">
   <!-- Email -->
-  <div class="mb-3">
-    <label class="inline-block mb-2">이메일</label>
-    <input name="email" #email="ngModel" ngModel type="email" class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
-          duration-500 focus:outline-none rounded bg-transparent
-          focus:border-indigo-400" required />
-    <p *ngIf="email.errors && email.touched && email.dirty">이메일을 입력하세요</p>
+  <div class="form-control">
+    <input name="email" #email="ngModel" ngModel type="email" class="" required placeholder="이메일" />
+    <small *ngIf="email.errors && email.touched && email.dirty">이메일을 입력하세요</small>
   </div>
   <!-- Password -->
-  <div class="mb-3">
-    <label class="inline-block mb-2">비밀번호</label>
-    <input name="password" #password="ngModel" ngModel type="password" class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
-        duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400" required />
-    <p *ngIf="password.errors && password.touched &&password.dirty">비밀번호를 입력하세요</p>
+  <div class="form-control">
+    <input name="password" #password="ngModel" ngModel type="password" class="" required placeholder="비밀번호" />
+    <small *ngIf="password.errors && password.touched &&password.dirty">비밀번호를 입력하세요</small>
   </div>
-  <button type="submit" class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition
-        hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400 " [disabled]="form.invalid || isSubmission">
+  <button type="submit" class="btn-submit" [disabled]="form.invalid || isSubmission">
     로그인
   </button>
 </form>

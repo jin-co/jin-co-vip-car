@@ -1,0 +1,45 @@
+form {  
+  display: flex;
+  height: 300px;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.form-control {
+  position: relative;
+}
+
+label {
+  width: 70px;
+  display: block;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;    
+  margin: 0;
+  border: none;  
+}
+
+input:focus {
+  outline: none;
+}
+
+small {
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  display: block;
+  color: red;
+}
+
+.btn-submit {
+  height: 40px;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  border: none;  
+  background-color: aquamarine;
+}
