@@ -11,11 +11,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { ClipComponent } from './components/clip/clip.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { FbTimestampPipe } from './pipes/fbTimestamp.pipe';
-import { ClipListComponent } from './components/clip/clip-list/clip-list.component';
 import { PriceComponent } from './components/price/price.component';
 
 @NgModule({
@@ -24,9 +22,7 @@ import { PriceComponent } from './components/price/price.component';
     NavComponent,
     HomeComponent,
     AboutComponent,
-    ClipComponent,
     NotfoundComponent,
-    ClipListComponent,
     FbTimestampPipe,
     PriceComponent,     
   ],
