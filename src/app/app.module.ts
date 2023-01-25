@@ -15,6 +15,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { FbTimestampPipe } from './pipes/fbTimestamp.pipe';
 import { PriceComponent } from './components/price/price.component';
+import { ImagesComponent } from './components/images/images.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PriceComponent } from './components/price/price.component';
     AboutComponent,
     NotfoundComponent,
     FbTimestampPipe,
-    PriceComponent,     
+    PriceComponent,
+    ImagesComponent,     
   ],
   imports: [
     BrowserModule,
