@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyCvZwimyXWzMTbC5MiLY_JaL5Yv1t1krzg',
-    authDomain: 'clips-24b56.firebaseapp.com',
-    projectId: 'clips-24b56',
-    storageBucket: 'clips-24b56.appspot.com',
-    messagingSenderId: '769811289695',
-    appId: '1:769811289695:web:b05041b885c4e0c03dadea',
-  },
+    apiKey: "AIzaSyAnp1n2L6BO8hH3OxzO2lUytQc4TqGkT6o",
+    authDomain: "vip-car-3f9fa.firebaseapp.com",
+    projectId: "vip-car-3f9fa",
+    storageBucket: "vip-car-3f9fa.appspot.com",
+    messagingSenderId: "648301269101",
+    appId: "1:648301269101:web:2bc07e2e0cabae817aef64"
+  }
 };
