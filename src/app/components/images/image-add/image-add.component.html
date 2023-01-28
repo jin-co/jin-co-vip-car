@@ -1,1 +1,3 @@
 <input type="file" (change)="onImageUpload($event)">
+<button (click)="onDownloadClick()">Download</button>
+<img [src]="imageURL | async" alt="">
