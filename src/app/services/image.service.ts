@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,11 +13,19 @@ export class ImageService {
   ]
 
   idx!:Observable<number>
-  constructor() { }
+  constructor(private storage: AngularFireStorage) { }
 
   getIdx(idx:number) {
     this.idx = new Observable(o => {
       o.next(idx)
     })
+  }
+
+  addImage(file:File, filePath:string) {
+    this.storage.ref(filePath).put(file)
+  }
+
+  getImages() {
+
   }
 }
