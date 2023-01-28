@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
@@ -7,22 +8,14 @@ import { ImageService } from 'src/app/services/image.service';
   styleUrls: ['./images.component.css'],
 })
 export class ImagesComponent implements OnInit {
-  images: string[] = [
-    '../../../assets/images/undraw_Towing_re_wesa.png',
-    '../../../assets/images/undraw_towing_re_wesa.svg',
-    '../../../assets/images/vip_shop.png',
-  ];
-  idx: number = 0;
+  images: string[] = [];  
+  imageURL!: Observable<string>;
   constructor(private imageService: ImageService) {}
 
-  ngOnInit(): void {    
-    setTimeout(() => {
-      console.log(this.idx)
-      this.idx++;
-      this.imageService.getIdx(this.idx);
-    }, 1000);
-    this.imageService.idx.subscribe((idx) => {
-      this.idx = idx;
-    });
+  ngOnInit(): void {}
+
+  onDownloadClick() {
+    console.log(this.imageService.getImage());
+    this.imageURL = this.imageService.getImage();
   }
 }

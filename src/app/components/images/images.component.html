@@ -1,3 +1,4 @@
 <div class="container">
-  <img [src]="images[idx]" alt="">
+  <button (click)="onDownloadClick()">Download</button>
+  <img [src]="imageURL | async" alt="">
 </div>
