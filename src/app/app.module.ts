@@ -12,7 +12,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireStorageModule, BUCKET } from '@angular/fire/compat/storage';
 import { FbTimestampPipe } from './pipes/fbTimestamp.pipe';
 import { PriceComponent } from './components/price/price.component';
 import { ImagesComponent } from './components/images/images.component';
@@ -41,7 +41,9 @@ import { ImageManageComponent } from './components/images/image-manage/image-man
     AngularFireStorageModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    { provide: BUCKET, useValue: 'gs://vip-car-3f9fa.appspot.com' }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

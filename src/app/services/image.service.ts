@@ -26,6 +26,6 @@ export class ImageService {
   }
 
   getImage() {
-    return this.storage.ref('test').getDownloadURL();    
+    return this.storage.ref('test.png').getDownloadURL();    
   }
 }

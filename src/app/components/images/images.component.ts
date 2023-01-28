@@ -15,7 +15,7 @@ export class ImagesComponent implements OnInit {
   ngOnInit(): void {}
 
   onDownloadClick() {
-    console.log(this.imageService.getImage());
-    this.imageURL = this.imageService.getImage();
+    // console.log(this.imageService.getImage());
+    // this.imageURL = this.imageService.getImage();
   }
 }

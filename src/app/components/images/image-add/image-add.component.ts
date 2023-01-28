@@ -15,7 +15,7 @@ export class ImageAddComponent implements OnInit {
 
   onImageUpload(e: Event) {
     const file = (e.target as HTMLInputElement).files?.[0];
-    const filePath = 'test';
+    const filePath = 'test.png';
     this.imageService.addImage(file as File, filePath)
   }
 }
