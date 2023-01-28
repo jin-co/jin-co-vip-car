@@ -18,18 +18,15 @@
           [routerLinkActiveOptions]="{exact: true}">매장정보</a>
       </li>
 
-      <li *ngIf="!(authService.isAuthenticated$ | async) ; else loggedInMenu">
-        <a class="" (click)="openModal()">관리자</a>
+      <li (click)="openModal()" *ngIf="!(authService.isAuthenticated$ | async) ; else loggedInMenu">
+        <a class="">관리자</a>
       </li>
 
       <ng-template #loggedInMenu>
         <li>
-          <a class="" routerLink="/manage" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact: true}"
+          <a class="" routerLink="/image-manage" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact: true}"
             [queryParams]="{sort:'1'}">작업사진관리</a>
-        </li>
-        <li>
-          <a class="" routerLink="/upload" routerLinkActive="text-indigo-400">작업사진 올리기</a>
-        </li>
+        </li>        
         <li>
           <a class="" (click)="onLogout()">로그아웃</a>
         </li>

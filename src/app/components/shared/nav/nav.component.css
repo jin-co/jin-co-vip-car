@@ -1,5 +1,5 @@
 nav {
-  height: 100px;
+  height: 130px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -10,13 +10,15 @@ h1 {
   word-wrap: break-word;
 }
 
-ul {
+ul {  
   width: 100%;
   display: flex;  
   justify-content: space-around;
 }
 
-li {
+li {  
+  padding: 10px 20px;
   list-style: none;
+  cursor: pointer;
 }
 

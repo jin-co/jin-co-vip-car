@@ -11,12 +11,12 @@ export class ImageService {
     "../../../assets/images/vip_shop.png",
   ]
 
-  idx = new Observable<number>
+  idx!:Observable<number>
   constructor() { }
 
-  getIdx() {
-    setTimeout(() => {
-      
-    }, 1000)
+  getIdx(idx:number) {
+    this.idx = new Observable(o => {
+      o.next(idx)
+    })
   }
 }
