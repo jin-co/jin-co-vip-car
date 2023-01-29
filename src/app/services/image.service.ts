@@ -13,7 +13,7 @@ export class ImageService {
   ];
 
   idx!: Observable<number>;  
-  constructor(private storage: AngularFireStorage) {}
+  constructor(private storage: AngularFireStorage, private ) {}
 
   getIdx(idx: number) {
     this.idx = new Observable((o) => {
@@ -22,7 +22,7 @@ export class ImageService {
   }
 
   addImage(file: File, filePath: string) {
-    this.storage.ref(filePath).put(file);
+    this.storage.ref(filePath).put(file);    
   }
 
   getImage() {
