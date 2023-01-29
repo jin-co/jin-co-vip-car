@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Observable } from 'rxjs';
@@ -12,8 +13,8 @@ export class ImageService {
     '../../../assets/images/vip_shop.png',
   ];
 
-  idx!: Observable<number>;  
-  constructor(private storage: AngularFireStorage, private ) {}
+  idx!: Observable<number>;
+  constructor(private storage: AngularFireStorage, private http: HttpClient) {}
 
   getIdx(idx: number) {
     this.idx = new Observable((o) => {
@@ -22,7 +23,7 @@ export class ImageService {
   }
 
   addImage(file: File, filePath: string) {
-    this.storage.ref(filePath).put(file);    
+    this.storage.ref(filePath).put(file);
   }
 
   getImage() {

@@ -18,6 +18,7 @@ import { PriceComponent } from './components/price/price.component';
 import { ImagesComponent } from './components/images/images.component';
 import { ImageAddComponent } from './components/images/image-add/image-add.component';
 import { ImageManageComponent } from './components/images/image-manage/image-manage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ImageManageComponent } from './components/images/image-manage/image-man
     PriceComponent,
     ImagesComponent,
     ImageAddComponent,
-    ImageManageComponent,     
+    ImageManageComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,10 +41,9 @@ import { ImageManageComponent } from './components/images/image-manage/image-man
     AngularFirestoreModule,
     AngularFireStorageModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [
-    { provide: BUCKET, useValue: 'gs://vip-car-3f9fa.appspot.com' }
-  ],
+  providers: [{ provide: BUCKET, useValue: 'gs://vip-car-3f9fa.appspot.com' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
